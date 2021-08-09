@@ -1,0 +1,16 @@
+apply plugin: 'java-library'
+
+dependencies {
+    implementation "org.springframework.boot:spring-boot-starter-web"
+
+    implementation project(':demo-spec')
+    api project(':demo-data')
+    implementation 'com.baomidou:mybatis-plus-boot-starter'
+
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-yaml'
+    implementation 'org.springframework:spring-context-support'
+
+    testImplementation('org.springframework.boot:spring-boot-starter-test') {
+        exclude group: 'org.junit.vintage', module: 'junit-wintage-engine'
+    }
+}

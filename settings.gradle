@@ -1,4 +1,5 @@
 includeDir 'apps'
+includeDir 'demo'
 rootProject.name = 'gradle-moudle'
 
 

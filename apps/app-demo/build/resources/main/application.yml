@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: demo
+  datasource:
+    dynamic:
+      primary: demo
+
+
+springdoc:
+  swagger-ui:
+    path: /demo/swagger-ui/index.html
+  api-docs:
+    path: /demo/v3/api-docs
+
+management:
+  health:
+    ldap:
+      enabled: false
+  endpoint:
+    health:
+      probes:
+        enabled: true
+
+server:
+  port: 8091

@@ -1,2 +1,0 @@
-org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.sensetime.sensegear.app.portal.PortalAppApplication

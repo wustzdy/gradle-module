@@ -1,0 +1,7 @@
+apply plugin: 'java-library'
+
+dependencies {
+    api project(':demo-spec')
+    implementation project(':demo-core')
+    implementation 'org.springdoc:springdoc-openapi-ui'
+}
