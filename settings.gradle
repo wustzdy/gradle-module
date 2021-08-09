@@ -1,1 +1,13 @@
+includeDir 'apps'
 rootProject.name = 'gradle-moudle'
+
+
+def includeDir(dir) {
+    FileFilter filter = {
+        it.isDirectory() && file("${it.absolutePath}${File.separator}build.gradle").isFile()
+    }
+    file(dir).listFiles(filter).each {
+        include it.name
+        project(":${it.name}").projectDir = file(it.absolutePath)
+    }
+}
